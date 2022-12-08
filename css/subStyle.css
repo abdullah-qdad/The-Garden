@@ -6,7 +6,7 @@
 /*Container layout*/
 section{
     height: 100vh;
-    background-color: #F0DBDB;
+    background-color: #DBA39A;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@ section{
 }
 /*label styling*/
 label{
-    color: rgb(194, 187, 187);
+    color: rgb(164, 164, 164);
     font-size: 50px;
     margin-bottom: 10px;
 
