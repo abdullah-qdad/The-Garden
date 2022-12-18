@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.con{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#left{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#left img{
+    width: 90%;
+    height: 80%;
+    border: 2px solid orange;
+}
+
+#right{
+    width: 65%;
+    height: 100%;
+    text-align: center;
+}
+
+#right h2{
+    color: #E14D2A;
+    font-size: 42px;
+    margin-top: 20%;
+    margin-bottom: 2%;
+}
+#right p{
+    font-size: 21px;
+}
