@@ -1,20 +1,56 @@
 'use strict';
-let flowers = [];
 
-function Flower(name, color, length, width, description ){
-this.name = name;
-this.color = color;
-this.length = length;
-this.width = width;
-this.description = description;
-flowers.push(this);
+// allusers
+const allUsers = [];
 
-};
+// users
+function User(name, email, password) {
 
-let rose = new Flower("ROSE", "White", 16, 7, "Scientific Name: Rosa. Perhaps the most famous flower on the list, the beautiful rose has attained cultural significance around the world and is often used to symbolise love, affection and beauty. Ranging from blooms as small as a fingernail to the majestic Grandiflora, there are thousands of different cultivations of roses available in rich colours and fragrances. The scientific name comes from the Latin rosa: an easy one to remember!");
+    this.name = name;
+    this.email = email;
+    this.password = password;
+    allUsers.push(this)
+}
 
-let lily = new Flower("LILY", "Red white", 12, 5, "Scientific Name: Lilium. Tall, majestic and strikingly-shaped: lilies are a popular choice for bouquets due to their unusual shape and scent. Like roses, lilies are an important cultural and literary device and are known throughout the temperate Northern Hemisphere for their beauty and resilience.");
+// data
+let user1 = new User("abdullah", "a@gmail.com", 21312);
+let user2 = new User("bdullah", "b@gmail.com", 21312);
+let user3 = new User("dullah", "c@gmail.com", 21312);
+let user4 = new User("ullah", "d@gmail.com", 21312);
 
-let tulip = new Flower("TULIP", "Red", 19, 6, "Scientific Name: Tulipa. Closely related to the lily and with a long history of cultivation at Latitude 40° North - an area spanning Ukraine and Turkey along with the Caspian Sea and even all the way to China - tulips have been seen as a symbol of wealth and abundance through the ages.");
+//get user info
+let userForm = document.getElementById('userForm');
+userForm.addEventListener("submit", addNewUser);
+
+// add new user function
+function addNewUser(e) {
+    e.preventDefault();
+    let name = e.target.name.value;
+    let email = e.target.email.value;
+    let password = e.target.password.value;
+    
+    check(name, email, password)
+
+    
+
+}
+
+// check if it already subscribes
+
+function check(name, email, password){
+
+    for(let i = 0 ; i < allUsers.length ; i++){
+
+        if(allUsers[i].email === email){
+            break;
+        }
+        else if (i === allUsers.length-1 && allUsers[i].email !== email){
+            new User(name, email, password);
+        }
+    }
+}
+
+
+
 
 
